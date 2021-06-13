@@ -113,7 +113,7 @@ let r9 = document.querySelector('.r-9');
 
 function f9() {
   if (r9.checked) {
-    out9.innerHTML = r9.value + ' radiobutton';
+    out9.innerHTML = r9.value;
   } else {
     out9.innerHTML = false;
   }
