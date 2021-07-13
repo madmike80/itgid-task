@@ -125,7 +125,24 @@ document.querySelector('.b-5').onclick = t5;
 // 10x01x
 // 10x01x
 
-function t6() {}
+let out6 = document.querySelector('.out-6');
+
+function t6() {
+  let out = '';
+  for (let i = 0; i < 3; i++) {
+    for (let k = 0; k < 6; k++) {
+      if (k === 0 || k === 4) {
+        out += 1;
+      } else if (k === 1 || k === 3) {
+        out += 0;
+      } else {
+        out += 'x';
+      }
+    }
+    out += '<br>';
+  }
+  out6.innerHTML = out;
+}
 
 document.querySelector('.b-6').onclick = t6;
 
@@ -137,7 +154,18 @@ document.querySelector('.b-6').onclick = t6;
 // ***
 // ****
 
-function t7() {}
+let out7 = document.querySelector('.out-7');
+
+function t7() {
+  let out = '';
+  for (let i = 1; i < 5; i++) {
+    for (let k = 0; k < i; k++) {
+      out += '*';
+    }
+    out += '<br>';
+  }
+  out7.innerHTML = out;
+}
 
 document.querySelector('.b-7').onclick = t7;
 
@@ -151,7 +179,18 @@ document.querySelector('.b-7').onclick = t7;
 // **
 // *
 
-function t8() {}
+let out8 = document.querySelector('.out-8');
+
+function t8() {
+  let out = '';
+  for (let i = 5; i > 0; i--) {
+    for (let k = 0; k < i; k++) {
+      out += '*';
+    }
+    out += '<br>';
+  }
+  out8.innerHTML = out;
+}
 
 document.querySelector('.b-8').onclick = t8;
 
@@ -164,7 +203,18 @@ document.querySelector('.b-8').onclick = t8;
 // 1_2_3_4_
 // 1_2_3_4_5_
 
-function t9() {}
+let out9 = document.querySelector('.out-9');
+
+function t9() {
+  let out = '';
+  for (let i = 1; i < 6; i++) {
+    for (let k = 1; k < i + 1; k++) {
+      out += k + '_';
+    }
+    out += '<br>';
+  }
+  out9.innerHTML = out;
+}
 
 document.querySelector('.b-9').onclick = t9;
 
@@ -177,6 +227,21 @@ document.querySelector('.b-9').onclick = t9;
 //31_32_33_34_35_36_37_38_39_40_
 //41_42_43_44_45_46_47_48_49_50_
 
-function t10() {}
+let out10 = document.querySelector('.out-10');
+
+function t10() {
+  let out = '';
+  for (let i = 0; i < 5; i++) {
+    for (let k = 1; k <= 10; k++) {
+      if (i == 0 && k < 10) {
+        out += '0' + k + '_';
+      } else {
+        out += 10 * i + k + '_';
+      }
+    }
+    out += '<br>';
+  }
+  out10.innerHTML = out;
+}
 
 document.querySelector('.b-10').onclick = t10;
